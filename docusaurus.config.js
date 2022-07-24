@@ -33,6 +33,20 @@ const config = {
         },
       }),
     ],
+    [
+      'redocusaurus',
+      {
+        specs: [
+          {
+            id: 'openapi-yaml',
+            spec: './external-docs/api-server/openapi/openapi.yaml',
+          },
+        ],
+        theme: {
+          primaryColor: '#1890ff',
+        },
+      }
+    ]
   ],
 
   themeConfig:
@@ -58,6 +72,11 @@ const config = {
             label: 'API',
           }
         ],
+      },
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
       },
       prism: {
         theme: lightCodeTheme,
